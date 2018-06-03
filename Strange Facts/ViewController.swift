@@ -36,11 +36,6 @@ class ViewController: UIViewController {
         view.backgroundColor = randomColor
         funFactButton.tintColor = randomColor
     }
-    
-    
-    
-
-    
 }
 
 
