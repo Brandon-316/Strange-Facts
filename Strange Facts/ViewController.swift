@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var funFactLabel: UILabel!
-    @IBOutlet weak var funFactButton: UIButton!
+    @IBOutlet weak var strangeFactLabel: UILabel!
+    @IBOutlet weak var strangeFactButton: UIButton!
     
     
     let factProvider = StrangeFacts().randomSequenceGenerator(min: 0, max: StrangeFacts().facts.count - 1)
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
 
-        funFactLabel.text = factProvider()
+        strangeFactLabel.text = factProvider()
 
     }
     
@@ -31,10 +31,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showFact() {
-        funFactLabel.text = factProvider()
+        strangeFactLabel.text = factProvider()
         let randomColor = colorProvider.randomColor()
         view.backgroundColor = randomColor
-        funFactButton.tintColor = randomColor
+        strangeFactButton.tintColor = randomColor
     }
 }
 
